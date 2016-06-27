@@ -1,11 +1,19 @@
-<div class="user" ng-controller="UsersCtrl">
-<h2>{{user.first_name}} {{user.last_name}}</h2>
-<h4>{{user.email}}</h4>
-<h4>{{user.zip}}</h4>
-<img src="{{user.image_url}}" style="height:90px; width:90px;">
+
+
+<!-- <div ng-repeat="user in users"> -->
+<div ng-controller="UsersCtrl">
+{{user.firstName}} {{user.lastName}}
   <br>
-  <br>
+  {{user.email}}
+  {{user.zip}}
+  <img src="{{user.image}}" style="height:90px; width:90px;">
 </div>
 
-Tim
-
+<!--   <div ng-repeat="user in users">
+    {{user.first_name}} {{user.last_name}}
+    <br>
+    {{user.email}}
+    {{user.zip}}
+    <img src="{{user.image_url}}" style="height:90px; width:90px;">
+  </div>
+  FOR MULTIPLE USERS-->
