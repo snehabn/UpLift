@@ -4,10 +4,10 @@
 		<div class="specific-org">
 			<a href="/"><img src="{{organization.image_url}}" class="img-rounded orgs" alt="Rounded Image"></a>
 				<br></center>
-				<ul>
-					<li>{{organization.phone_number}}</li>
-					<li>{{organization.email}}</li>
-					<li>{{organization.mission_statement}}</li>
+				<ul class="list-group">
+					<li class="list-group-item">Phone Number: {{organization.phone_number}}</li>
+					<li class="list-group-item">Email: {{organization.email}}</li>
+					<li class="mission list-group-item">Mission Statement: "{{organization.mission_statement}}"</li>
 				</ul>
 		</div>
 	</div>

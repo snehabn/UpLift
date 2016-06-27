@@ -81,8 +81,17 @@ body {
     border-bottom: 0;
   }
 
-  .orgs {
-    height:20%; 
-    width:20%;
+  .orgs, .img-rounded {
+    height:30%; 
+    width:30%;
+  }
+
+  .specific-org {
+    max-width:40%
+    max-height:40%;
+  }
+
+  .mission {
+    font-style: italic; 
   }
 }
