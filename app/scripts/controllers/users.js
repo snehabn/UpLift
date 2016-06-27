@@ -20,6 +20,6 @@ angular.module('upliftApp')
 
     // });
     UsersService.getAll().then(function(data){
-      $scope.user = data.data;
+      $scope.users = data.data;
     });
 }]);
