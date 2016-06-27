@@ -11,14 +11,6 @@ angular.module('upliftApp')
 		});
 	};
 
-	
-	// o.get = function(id) {
-	// 	return $http.get('http://localhost:3000/api/rooms/'+id).then(function(res){
-	// 		console.log(res.data)
-	// 		return res.data;
-	// 	});
-	// };
-
 	return orgs;
 
 });
