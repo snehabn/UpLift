@@ -39,6 +39,11 @@ angular
         controller: 'EventsCtrl',
         controllerAs: 'event'
       })
+      .when('/events/:id', {
+        templateUrl: 'views/organizations.html',
+        controller: 'OrganizationsCtrl',
+        controllerAs: 'organization'
+      })
       .otherwise({
         redirectTo: '/'
       });
