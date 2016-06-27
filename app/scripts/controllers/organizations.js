@@ -20,7 +20,6 @@ angular.module('upliftApp')
 
     // });
     OrganizationsService.getAll().then(function(data){
-      console.log(data)
-      $scope.organization = data.data[0];
+      $scope.organization = data.data;
     });
 }]);
