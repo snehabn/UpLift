@@ -80,4 +80,9 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+
+  .orgs {
+    height:20%; 
+    width:20%;
+  }
 }
