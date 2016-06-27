@@ -1,0 +1,14 @@
+<div class="event" ng-controller="specificEventCtrl">
+		
+		<h3>{{event["organization"].name}}</h3>
+
+		<h3>{{event.event.name}}</h3>
+
+	<div ng-repeat="skill in skills">{{skill}}</div>	
+		<h3>{{event["skills"][0].name}}</h3>
+		<h3>{{event["skills"][1].name}}</h3>
+		<p>{{event.event.street}} {{event.event.city}}, {{event.event.state}}</p>
+		{{event}}
+	</div>
+
+<a href="/#/">Home</a>
