@@ -5,8 +5,6 @@ angular.module('upliftApp')
 
 	var orgs = {};
 
-	// orgs = []
-
 	orgs.getAll = function() {
 		return $http.get('https://blooming-cove-33951.herokuapp.com/organizations').success(function(data){
 			angular.copy(data, orgs);

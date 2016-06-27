@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('upliftApp')
-  .controller('OrganizationsCtrl',['$scope', 'OrganizationsService', 
+  .controller('OrganizationsCtrl',['$scope', '$route', 'OrganizationsService', 
 
-    function ($scope, OrganizationsService) {
+    function ($scope, $route,OrganizationsService) {
 
     // var controller = this;
     // $http({
