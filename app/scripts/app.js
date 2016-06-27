@@ -34,6 +34,11 @@ angular
         controller: 'UsersCtrl',
         controllerAs: 'user'
       })
+      .when('/events', {
+        templateUrl: 'views/events.html',
+        controller: 'EventsCtrl',
+        controllerAs: 'event'
+      })
       .otherwise({
         redirectTo: '/'
       });
