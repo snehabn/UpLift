@@ -3,7 +3,7 @@
 angular.module('upliftApp')
   .controller('OrganizationsCtrl',['$scope', 'OrganizationsService', 
 
-    function ($scope,OrganizationsService) {
+    function ($scope, OrganizationsService) {
 
     // var controller = this;
     // $http({

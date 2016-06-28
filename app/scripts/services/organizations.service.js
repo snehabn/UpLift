@@ -5,12 +5,13 @@ angular.module('upliftApp')
 
 	var orgs = {};
 
-	orgs.getAll = function() {
+	this.getAll = function() {
 		return $http.get('https://blooming-cove-33951.herokuapp.com/organizations').success(function(data){
 			angular.copy(data, orgs);
 		});
 	};
-
-	return orgs;
+	// console.log('************************')
+	// console.log(data)
+	// return orgs;
 
 });

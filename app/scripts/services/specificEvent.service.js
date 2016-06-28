@@ -4,11 +4,11 @@ angular.module('upliftApp')
 .service('specificEventService', function($http){
 	
 	var specificEvent = {};
-	specificEvent.get = function(id) {
+	this.get = function(id) {
 		return $http.get('https://blooming-cove-33951.herokuapp.com/events/'+id+'/').success(function(data){
 			angular.copy(data, specificEvent);
 		});
 	};
-	return specificEvent;
+	// return specificEvent;
 
 });
