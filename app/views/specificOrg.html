@@ -1,26 +1,3 @@
-<div class="org" ng-controller="specificOrgCtrl">
-  <img src="{{oneOrg.Image}}" style="height:90px; width:90px;"><h3>{{oneOrg.Name}} </h3>
-  Mission: {{oneOrg.Mission}}<br>
-  Phone: {{oneOrg.Phone}}<br>
-  Email: {{oneOrg.Email}}<br>
-  Website: <a href="{{oneOrg.web}}">{{oneOrg.Web}}</a><br>
-  Zip: {{oneOrg.Zip}}<br>
-</div>
-<br>
-<br>
-
-Test Map here:
-
-<div id="floating-panel">
-  <input id="address" type="textbox" value="{{oneOrg.Zip}}">
-  <input id="submit" type="button" value="Geocode">
-</div>
-<div id="map"></div>
-
-<br>
-
-<a href="/#/">Home</a>
-
 <!-- Google map for angular -->
 <script>
   function initMap() {
@@ -52,7 +29,29 @@ Test Map here:
   }
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGC4vCCu27F645BNPEPAvdGN1VKebWwIQ&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGC4vCCu27F645BNPEPAvdGN1VKebWwIQ&callback=initMap" async defer></script><div class="org" ng-controller="specificOrgCtrl">
+  <img src="{{oneOrg.Image}}" style="height:90px; width:90px;"><h3>{{oneOrg.Name}} </h3>
+  Mission: {{oneOrg.Mission}}<br>
+  Phone: {{oneOrg.Phone}}<br>
+  Email: {{oneOrg.Email}}<br>
+  Website: <a href="{{oneOrg.web}}">{{oneOrg.Web}}</a><br>
+  Zip: {{oneOrg.Zip}}<br>
+</div>
+<br>
+<br>
+
+Test Map here:
+
+<div id="floating-panel">
+  <input id="address" type="textbox" value="{{oneOrg.Zip}}">
+  <input id="submit" type="button" value="Geocode">
+</div>
+<div id="map"></div>
+
+<br>
+
+<a href="/#/">Home</a>
+
 <!-- <script>
   function initMap() {
     var myLatLng = {lat: -25.363, lng: 131.044};
