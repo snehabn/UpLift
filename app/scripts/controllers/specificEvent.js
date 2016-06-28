@@ -24,7 +24,6 @@ angular.module('upliftApp')
     // });
 
     specificEventService.get($routeParams.id).then(function(data){
-        console.log(data);
       $scope.event = data.data;
     });
 }]);
