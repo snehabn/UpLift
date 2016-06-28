@@ -5,7 +5,7 @@ angular.module('upliftApp')
 
 	var users = {};
 
-	users.getAll = function() {
+	this.getAll = function() {
 		return $http.get('https://blooming-cove-33951.herokuapp.com/users').success(function(data){
 			angular.copy(data, users);
 		});
@@ -47,6 +47,6 @@ angular.module('upliftApp')
 	// 	return $http.post('http://localhost:3000/api/rooms/'+id+'/vote_out', content)
 	// }
 
-	return users;
+	// return users;
 
 });
