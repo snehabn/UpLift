@@ -10,13 +10,13 @@ angular.module('upliftApp')
       var singleOrg = data.data;
       console.log(singleOrg);
       $scope.oneOrg = {
-        name: singleOrg.organization.name,
-        email: singleOrg.organization.email,
-        zip: singleOrg.organization.zip,
-        mission: singleOrg.organization.mission_statement,
-        phone: singleOrg.organization.phone_number,
-        web: singleOrg.organization.website_url,
-        image: singleOrg.organization.image_url
+        Name: singleOrg.organization.name,
+        Email: singleOrg.organization.email,
+        Zip: singleOrg.organization.zip,
+        Mission: singleOrg.organization.mission_statement,
+        Phone: singleOrg.organization.phone_number,
+        Web: singleOrg.organization.website_url,
+        Image: singleOrg.organization.image_url
       };
       // $scope.oneOrg = data.data;
     });
