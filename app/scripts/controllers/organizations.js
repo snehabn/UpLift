@@ -18,6 +18,7 @@ angular.module('upliftApp')
     //   // $scope.eventsForOrg = $scope.getEventsByOrg($scope.events, 1);
     // }, function errorCallback(response) {
 
+
     // });
     OrganizationsService.getAll().then(function(data){
       $scope.organizations = data.data;
