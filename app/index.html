@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="upliftApp">
   <head>
     <meta charset="utf-8">
     <title></title>
@@ -14,14 +14,43 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+
                 <style>
                   #map {
                     width: 100%;
                     height: 400px;
                   }
                 </style>
+
+        <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/organizations.js"></script>
+        <script src="scripts/controllers/users.js"></script>
+        <script src="scripts/controllers/events.js"></script>
+        <script src="scripts/controllers/specificEvent.js"></script>
+        <script src="scripts/services/organizations.service.js"></script>
+        <script src="scripts/services/users.service.js"></script>
+        <script src="scripts/services/events.service.js"></script>
+        <script src="scripts/services/specificEvent.service.js"></script>
+        <!-- endbuild -->
   </head>
-  <body ng-app="upliftApp">
+  <body>
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -47,6 +76,8 @@
 
             <ul class="nav navbar-nav">
               <li class="active"><a href="#/">Home</a></li>
+              <!-- <li><a ui-sref="event">Events</a></li> -->
+              <!-- <li><a ui-sref="organizations">Organizations</a></li> -->
               <li><a ng-href="#/events">Events</a></li>
               <li><a ng-href="#/organizations">Organizations</a></li>
               <li><a ng-href="#/users">Login</a></li>
@@ -79,35 +110,5 @@
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
     </script>
-
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/organizations.js"></script>
-        <script src="scripts/controllers/users.js"></script>
-        <script src="scripts/controllers/events.js"></script>
-        <script src="scripts/controllers/specificEvent.js"></script>
-        <script src="scripts/controllers/specificOrg.js"></script>
-        <script src="scripts/services/organizations.service.js"></script>
-        <script src="scripts/services/users.service.js"></script>
-        <script src="scripts/services/events.service.js"></script>
-        <script src="scripts/services/specificEvent.service.js"></script>
-        <script src="scripts/services/specificOrg.service.js"></script>
-        <!-- endbuild -->
 </body>
 </html>
