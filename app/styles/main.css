@@ -59,6 +59,11 @@ body {
   margin-top: 28px;
 }
 
+#map {
+  width: 100%;
+  height: 400px;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
