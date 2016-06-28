@@ -30,7 +30,7 @@ angular.module('upliftApp')
         email: tempUser1.email,
         zip: tempUser1.zip,
         image: tempUser1.image_url
-      }
+      };
     });
 
     // Trying to get user's events
