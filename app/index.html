@@ -1,11 +1,11 @@
-<!-- <!doctype html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
@@ -14,6 +14,12 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+                <style>
+                  #map {
+                    width: 100%;
+                    height: 400px;
+                  }
+                </style>
   </head>
   <body ng-app="upliftApp">
     <!--[if lte IE 8]>
@@ -34,14 +40,16 @@
             </button>
 
             <a class="navbar-brand" href="#/">UpLift</a>
+            
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
             <ul class="nav navbar-nav">
               <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
+              <li><a ng-href="#/events">Events</a></li>
+              <li><a ng-href="#/organizations">Organizations</a></li>
+              <li><a ng-href="#/users">Login</a></li>
             </ul>
           </div>
         </div>
@@ -50,14 +58,16 @@
 
     <div class="container">
     <div ng-view=""></div>
+
+    <!-- <div id="map"></div> -->
     </div>
 
-    <div class="footer">
+    <!-- <div class="footer">
       <div class="container">
         <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
       </div>
     </div>
-
+ -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -88,8 +98,16 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/customer.js"></script>
+        <script src="scripts/controllers/organizations.js"></script>
+        <script src="scripts/controllers/users.js"></script>
+        <script src="scripts/controllers/events.js"></script>
+        <script src="scripts/controllers/specificEvent.js"></script>
+        <script src="scripts/controllers/specificOrg.js"></script>
+        <script src="scripts/services/organizations.service.js"></script>
+        <script src="scripts/services/users.service.js"></script>
+        <script src="scripts/services/events.service.js"></script>
+        <script src="scripts/services/specificEvent.service.js"></script>
+        <script src="scripts/services/specificOrg.service.js"></script>
         <!-- endbuild -->
 </body>
 </html>
- -->
