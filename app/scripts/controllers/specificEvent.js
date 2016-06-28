@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('upliftApp')
-  .controller('OrganizationsCtrl',['$scope', 'OrganizationsService', 
+  .controller('specificEventCtrl',['$scope', '$route', '$routeParams', 'specificEventService',
 
-    function ($scope, OrganizationsService) {
+    function ($scope, $route, $routeParams, specificEventService) {
 
     // var controller = this;
     // $http({
@@ -18,10 +18,12 @@ angular.module('upliftApp')
     //   // $scope.eventsForOrg = $scope.getEventsByOrg($scope.events, 1);
     // }, function errorCallback(response) {
 
-
     // });
-    OrganizationsService.getAll().then(function(data){
-      $scope.organizations = data.data;
-    });
+    // EventsService.getAll().then(function(data){
+    //   $scope.events = data.data;
+    // });
 
+    specificEventService.get($routeParams.id).then(function(data){
+      $scope.event = data.data;
+    });
 }]);

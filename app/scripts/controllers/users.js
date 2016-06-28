@@ -24,11 +24,29 @@ angular.module('upliftApp')
       var tempUser1 = tempUsers[0]; //display 1 user for now
 
       $scope.user = {
+        id: tempUser1.id,
         firstName: tempUser1.first_name,
         lastName: tempUser1.last_name,
         email: tempUser1.email,
         zip: tempUser1.zip,
         image: tempUser1.image_url
-      }
+      };
     });
+
+    // Trying to get user's events
+    // UsersService.getEvents().then(function(data1){
+    //   // console.log(data1.data);
+    //   var allEvents = data1.data;
+    //   var tempUserEvents = [];
+    //   console.log(allEvents[0].id);
+
+    //   for (var i = 0; i < allEvents.length; i++){
+    //     if (allEvents[i].user_id == 1){
+    //       tempUserEvents.push(allEvents[i]);
+    //     }
+    //   }
+    //   // console.log(tempUserEvents);
+    //   $scope.eventsUsers = tempUserEvents.data;
+    //   console.log(eventsUsers);
+    // });
 }]);

@@ -1,8 +1,16 @@
 <div class="event" ng-controller="EventsCtrl">
+  <h2>Here are some upcoming events!</h2>
+  <br>
+  <input type="text" ng-model="searchBox">
 
-HeLLLOOOOOo
+  <div ng-repeat="event in events | filter: searchBox">
 
-<h1 ng-repeat="event in events">{{event.name}}</h1>
+    <h3><a href="#/events/{{event.id}}">{{event.name}}</a></h3>
+    <!-- {{event}} -->
+    <p>{{event.street}} {{event.city}}, {{event.state}}</p>
+    <p ng-repeat="skill in event.skills">{{skill.name}}</p>
+  </div>
+
 </div>
 
-<a href="/#/">test</a>
+<a href="/#/">Home</a>

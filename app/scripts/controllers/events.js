@@ -22,4 +22,8 @@ angular.module('upliftApp')
     EventsService.getAll().then(function(data){
       $scope.events = data.data;
     });
+
+    // EventsService.get(id).then(function(data){
+    //   $scope.event = data.data;
+    // });
 }]);
