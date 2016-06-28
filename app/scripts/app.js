@@ -27,16 +27,21 @@ angular
       .when('/organizations', {
         templateUrl: 'views/organizations.html',
         controller: 'OrganizationsCtrl',
-        controllerAs: 'organization'
+        controllerAs: 'organizations'
       })
       .when('/users', {
         templateUrl: 'views/users.html',
         controller: 'UsersCtrl',
-        controllerAs: 'user'
+        controllerAs: 'users'
       })
       .when('/events', {
         templateUrl: 'views/events.html',
         controller: 'EventsCtrl',
+        controllerAs: 'events'
+      })
+      .when('/events/:id', {
+        templateUrl: 'views/specificEvent.html',
+        controller: 'specificEventCtrl',
         controllerAs: 'event'
       })
       .otherwise({
