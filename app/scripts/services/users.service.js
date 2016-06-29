@@ -3,7 +3,7 @@
 angular.module('upliftApp')
 .service('UsersService', function($http){
 
-	var users = {};
+	var users = [];
 
 	this.getAll = function() {
 		return $http.get('https://blooming-cove-33951.herokuapp.com/users').success(function(data){

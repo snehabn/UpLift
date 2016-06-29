@@ -1,6 +1,7 @@
 <div class="event" ng-controller="EventsCtrl">
   <h2>Here are some upcoming events!</h2>
   <br>
+  <h4>Where are you located? Or what do you enjoy?</h4>
   <input type="text" ng-model="searchBox">
 
   <div ng-repeat="event in events | filter: searchBox">
@@ -12,5 +13,3 @@
   </div>
 
 </div>
-
-<a href="/#/">Home</a>
