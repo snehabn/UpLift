@@ -16,6 +16,8 @@ angular.module('upliftApp')
 			angular.copy(data1, users);
 		});
 	};
+
+
 	// o.get = function(id) {
 	// 	return $http.get('http://localhost:3000/api/rooms/'+id).then(function(res){
 	// 		console.log(res.data)

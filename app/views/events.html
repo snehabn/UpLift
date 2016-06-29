@@ -8,7 +8,7 @@
     <h3><a href="#/events/{{event.id}}">{{event.name}}</a></h3>
     <!-- {{event}} -->
     <p>{{event.street}} {{event.city}}, {{event.state}}</p>
-    <p ng-repeat="skill in event.skills">{{skill.name}}</p>
+    <p class="event-skills" ng-repeat="skill in event.skills">{{skill.name}}</p>
   </div>
 
 </div>
