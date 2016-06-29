@@ -46,6 +46,15 @@
         <!-- endbuild -->
   </head>
   <body>
+    <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=796968720438862";
+          fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -84,6 +93,14 @@
 
     <div class="container">
     <div ng-view=""></div>
+
+    <!-- Facebook Like button -->
+    <div class="fb-like" data-href="https://www.facebook.com/UpLift-995968273856562/" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+
+    <!-- Twitter Follow button -->
+    <a href="https://twitter.com/Squad_UpLift" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @Squad_UpLift</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+    </script>
 
     <!-- <div id="map"></div> -->
     </div>
