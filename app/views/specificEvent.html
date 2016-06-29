@@ -7,14 +7,13 @@
 			{{skill.name}}
 		</div>
 	</div>
-		<br>
-		<h4>Hosted by:</h4>
-		<a href='#/organizations'>{{event.organization.name}}</a>
-		<h4>Join us at this location:</h4>
-		<p>{{event.event.street}} {{event.event.city}}, {{event.event.state}}</p>
-		<h4>Contact us:</h4>
-		<p>Phone: {{event.organization.phone_number}}, <br> Email: <a href="mailto:{{event.organization.email}}?Subject=How%20can%20I%20volunteer?" target="_top">{{event.organization.email}}</a></p>
-
+	<br>
+	<h4>Hosted by:</h4>
+	<a href='#/organizations'>{{event.organization.name}}</a>
+	<h4>Join us at this location:</h4>
+	<p>{{event.event.street}} {{event.event.city}}, {{event.event.state}}</p>
+	<h4>Contact us:</h4>
+	<p>Phone: {{event.organization.phone_number}}, <br> Email: <a href="mailto:{{event.organization.email}}?Subject=How%20can%20I%20volunteer?" target="_top">{{event.organization.email}}</a></p>
 
 		<!-- <br>
 		<br>
@@ -28,7 +27,44 @@
 
 		{{event.skills[0].name}} -->
 
-</div>
-<br>
+	</div>
+	<br>
 
-<a href="/#/">Home</a>
+	<a href="/#/">Home</a>
+
+	<br>
+	<div id="floating-panel">
+		<input id="late" type="hidden" value="{{event.event.lat}}">
+		<input id="long" type="hidden" value="{{event.event.lng}}">
+		<!--   <input id="submit" type="button" value="Geocode"> -->
+	</div>
+
+	<div id="map"></div>
+
+	<br>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGC4vCCu27F645BNPEPAvdGN1VKebWwIQ&callback=initMap" async defer></script>
+
+	<script>
+		function initMap() {
+
+			var inputLat = document.getElementById('late').value;
+			var inputLng = document.getElementById('long').value;
+			var eventLat = parseFloat(inputLat);
+			var eventLng = parseFloat(inputLng);
+
+			var myLatLng = {lat: eventLat, lng: eventLng};
+
+			var mapDiv = document.getElementById('map');
+			var map = new google.maps.Map(mapDiv, {
+				center: myLatLng,
+				zoom: 14
+			});
+
+			var marker = new google.maps.Marker({
+				position: myLatLng,
+				map: map,
+				title: 'Hello World!'
+			});
+		}
+	</script>

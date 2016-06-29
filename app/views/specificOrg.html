@@ -1,35 +1,4 @@
-<!-- Google map for angular -->
-<script>
-  function initMap() {
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 16,
-      center: {lat: 37.7749, lng: -122.4194}
-    });
-    var geocoder = new google.maps.Geocoder();
-
-    document.getElementById('submit').addEventListener('click', function() {
-      geocodeAddress(geocoder, map);
-    });
-  }
-
-  function geocodeAddress(geocoder, resultsMap) {
-    var address = document.getElementById('address').value;
-    geocoder.geocode({'address': address}, function(results, status) {
-      if (status === google.maps.GeocoderStatus.OK) {
-        resultsMap.setCenter(results[0].geometry.location);
-        var marker = new google.maps.Marker({
-          map: resultsMap,
-          position: results[0].geometry.location
-        });
-        console.log(marker.map);
-      } else {
-        alert('Geocode was not successful for the following reason: ' + status);
-      }
-    });
-  }
-</script>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGC4vCCu27F645BNPEPAvdGN1VKebWwIQ&callback=initMap" async defer></script><div class="org" ng-controller="specificOrgCtrl">
+<div class="org" ng-controller="specificOrgCtrl">
   <img src="{{oneOrg.Image}}" style="height:90px; width:90px;"><h3>{{oneOrg.Name}} </h3>
   Mission: {{oneOrg.Mission}}<br>
   Phone: {{oneOrg.Phone}}<br>
@@ -40,32 +9,5 @@
 <br>
 <br>
 
-Test Map here:
-
-<div id="floating-panel">
-  <input id="address" type="textbox" value="{{oneOrg.Zip}}">
-  <input id="submit" type="button" value="Geocode">
-</div>
-<div id="map"></div>
-
-<br>
-
 <a href="/#/">Home</a>
 
-<!-- <script>
-  function initMap() {
-    var myLatLng = {lat: -25.363, lng: 131.044};
-
-    var mapDiv = document.getElementById('map');
-    var map = new google.maps.Map(mapDiv, {
-      center: myLatLng,
-      zoom: 10
-    });
-
-    var marker = new google.maps.Marker({
-      position: myLatLng,
-      map: map,
-      title: 'Hello World!'
-    });
-  }
-</script> map with marker -->
