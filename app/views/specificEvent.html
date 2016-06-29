@@ -21,6 +21,13 @@
 		<h4>Contact us:</h4>
 		<p>Phone: {{event.organization.phone_number}}, <br> Email: <a href="mailto:{{event.organization.email}}?Subject=How%20can%20I%20volunteer?" target="_top">{{event.organization.email}}</a></p>
 
+		<h4>Number of Volunteers Needed:</h4>
+		<p>{{event.event.volunteers_needed}}</p>
+		<h4>Dates:</h4>
+		<p>{{event.event.start_date | date }} - {{event.event.end_date | date }}</p>
+		<!-- Add image fields-->
+
+		<br>
 		<!-- Display Google Calendar -->
 		<iframe src="https://calendar.google.com/calendar/embed?src=dkm1djphqvkko6ug6ssip99ceg%40group.calendar.google.com&ctz=America/Los_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 
@@ -43,9 +50,6 @@
 
 	</div>
 	<br>
-
-	<a href="/#/">Home</a>
-
 	<br>
 
 	<div id="map" style="height:400px; width:400px; border-radius: 50%;"></div>
