@@ -36,5 +36,8 @@
     "dotenv": "^2.0.0",
     "express": "^4.14.0",
     "gzippo": "^0.2.0"
+  },
+  "scripts": {
+    "start": "node node_modules/http-server/bin/http-server app -o"
   }
 }
