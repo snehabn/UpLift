@@ -1,19 +1,32 @@
 <div class="event" ng-controller="specificEventCtrl">
-	<h3>{{event.event.name}}</h3>
+<!-- 	<div id="floating-panel">
+		<input id="late" type="text" value="{{event.event.lat}}">
+		<input id="long" type="text" value="{{event.event.lng}}">
+		 <input id="submit" type="button" value="Geocode">
+		</div> -->
 
-	<h4>Seeking Volunteers Who Enjoy:</h4>
-	<div ng-repeat="skills in event">
-		<div ng-repeat="skill in skills">
-			{{skill.name}}
+		<h3>{{event.event.name}}</h3>
+
+		<h4>Seeking Volunteers Who Enjoy:</h4>
+		<div ng-repeat="skills in event">
+			<div ng-repeat="skill in skills">
+				{{skill.name}}
+			</div>
 		</div>
-	</div>
-	<br>
-	<h4>Hosted by:</h4>
-	<a href='#/organizations'>{{event.organization.name}}</a>
-	<h4>Join us at this location:</h4>
-	<p>{{event.event.street}} {{event.event.city}}, {{event.event.state}}</p>
-	<h4>Contact us:</h4>
-	<p>Phone: {{event.organization.phone_number}}, <br> Email: <a href="mailto:{{event.organization.email}}?Subject=How%20can%20I%20volunteer?" target="_top">{{event.organization.email}}</a></p>
+		<br>
+		<h4>Hosted by:</h4>
+		<a href='#/organizations'>{{event.organization.name}}</a>
+		<h4>Join us at this location:</h4>
+		<p>{{event.event.street}} {{event.event.city}}, {{event.event.state}}</p>
+		<h4>Contact us:</h4>
+		<p>Phone: {{event.organization.phone_number}}, <br> Email: <a href="mailto:{{event.organization.email}}?Subject=How%20can%20I%20volunteer?" target="_top">{{event.organization.email}}</a></p>
+
+		<iframe src="https://calendar.google.com/calendar/embed?src=dkm1djphqvkko6ug6ssip99ceg%40group.calendar.google.com&ctz=America/Los_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+		<div id="floating-panel">
+			<input id="address" type="hidden" value="{{event.event.street}} {{event.event.city}}, {{event.event.state}} {{event.event.zip}}">
+			<input style="visibility:hidden; height:40px; width:400px;" id="submit" type="button" value="Geocode">
+		</div>
 
 		<!-- <br>
 		<br>
@@ -33,19 +46,12 @@
 	<a href="/#/">Home</a>
 
 	<br>
-	<div id="floating-panel">
-		<input id="late" type="hidden" value="{{event.event.lat}}">
-		<input id="long" type="hidden" value="{{event.event.lng}}">
-		<!--   <input id="submit" type="button" value="Geocode"> -->
-	</div>
 
-	<div id="map"></div>
+	<div id="map" style="height:400px; width:400px; border-radius: 50%;"></div>
 
 	<br>
 
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGC4vCCu27F645BNPEPAvdGN1VKebWwIQ&callback=initMap" async defer></script>
-
-	<script>
+	<!-- <script>
 		function initMap() {
 
 			var inputLat = document.getElementById('late').value;
@@ -53,18 +59,57 @@
 			var eventLat = parseFloat(inputLat);
 			var eventLng = parseFloat(inputLng);
 
-			var myLatLng = {lat: eventLat, lng: eventLng};
+			var myLatLng = {lat: 37.7749, lng: -122.4194};
 
 			var mapDiv = document.getElementById('map');
 			var map = new google.maps.Map(mapDiv, {
 				center: myLatLng,
-				zoom: 14
+				zoom: 12
 			});
 
 			var marker = new google.maps.Marker({
 				position: myLatLng,
 				map: map,
+				animation: google.maps.Animation.DROP,
 				title: 'Hello World!'
+			});
+
+			var trafficLayer = new google.maps.TrafficLayer();
+        trafficLayer.setMap(map);
+		}
+	</script> -->
+	<script>
+		function initMap() {
+			var myLatLng = {lat: 37.773972, lng: -122.431297};
+			var map = new google.maps.Map(document.getElementById('map'), {
+				zoom: 12,
+				center: myLatLng
+			});
+			var geocoder = new google.maps.Geocoder();
+
+			document.getElementById('floating-panel').addEventListener('click', function() {
+				geocodeAddress(geocoder, map);
+
+				var trafficLayer = new google.maps.TrafficLayer();
+        trafficLayer.setMap(map);
+			});
+		}
+
+		function geocodeAddress(geocoder, resultsMap) {
+			var address = document.getElementById('address').value;
+			geocoder.geocode({'address': address}, function(results, status) {
+				if (status === google.maps.GeocoderStatus.OK) {
+					resultsMap.setCenter(results[0].geometry.location);
+					var marker = new google.maps.Marker({
+						map: resultsMap,
+						position: results[0].geometry.location,
+						animation: google.maps.Animation.DROP,
+					});
+				} else {
+					alert('Geocode was not successful for the following reason: ' + status);
+				}
 			});
 		}
 	</script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGC4vCCu27F645BNPEPAvdGN1VKebWwIQ&callback=initMap" async defer></script>
