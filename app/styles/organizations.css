@@ -34,3 +34,19 @@
 	padding-bottom: 15px;
 	margin-bottom: 5px;
 }
+
+.list-group-item {
+	font-family: 'Times New Roman';
+}
+
+.org-title {
+ 	font-family: 'Calligraffitti', cursive;
+  	color: #F9F9F9;
+	font-weight: bold;
+  	font-size: 400%;
+}
+
+.org-name {
+	font-family: 'Calligraffitti', cursive;
+
+}

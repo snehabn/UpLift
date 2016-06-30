@@ -1,8 +1,9 @@
 <div ng-controller="OrganizationsCtrl">
+	<center><h1 class="org-title">Organizations</center></h1><br>
 	<div id="columns">
 		<div ng-repeat="organization in organizations">
 			<div class="pin">
-				<center><h4><a href="#/organizations/{{organization.id}}">{{organization.name}}</h4>
+				<center><h4><a href="#/organizations/{{organization.id}}" class="org-name">{{organization.name}}</h4>
 				<div class="specific-org">
 					<img src="{{organization.image_url}}" class="img-rounded orgs" alt="Rounded Image"></a>
 					<br></center>
