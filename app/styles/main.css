@@ -7,6 +7,10 @@
 
 body {
   padding: 0;
+  background-image: url("Uplift.jpg");
+  background-attachment: fixed;
+  background-size: 100%;
+  background-repeat: no-repeat;
 /*  background-image: url("DBCollage4.jpg");
   background-size: 100%;*/
 }
@@ -46,7 +50,8 @@ body {
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
-  background:rgba(0,0,0,0.5);
+  background:rgba(0,0,0,0.2);
+  color: white;
 }
 .jumbotron .btn {
   font-size: 21px;
@@ -121,4 +126,50 @@ body {
   max-height:35%; 
   max-width:35%;
   }
+
+  input[type=search] {
+    width: 500px;
+    height: 45px !important;
+    line-height: 45px !important;
+    border: none;
+    padding: 10px;
+    box-shadow: 1px 1px 1px #ADADAD;
+  }
+
+  #columns {
+  -webkit-column-count: 3;
+  -webkit-column-gap: 10px;
+  -webkit-column-fill: auto;
+  -moz-column-count: 3;
+  -moz-column-gap: 10px;
+  -moz-column-fill: auto;
+  column-count: 3;
+  column-gap: 15px;
+  column-fill: auto;
+}
+
+.pin {
+  display: inline-block;
+  background: #FEFEFE;
+  border: 2px solid #FAFAFA;
+  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+  margin: 0 2px 15px;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-inside: avoid;
+  padding: 15px;
+  padding-bottom: 5px;
+  background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
+  opacity: 1;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.pin img {
+  width: 100%;
+  padding-bottom: 15px;
+  margin-bottom: 5px;
+}
 }
