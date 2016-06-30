@@ -1,40 +1,34 @@
 <div class="event" ng-controller="specificEventCtrl">
-<!-- 	<div id="floating-panel">
-		<input id="late" type="text" value="{{event.event.lat}}">
-		<input id="long" type="text" value="{{event.event.lng}}">
-		 <input id="submit" type="button" value="Geocode">
-		</div> -->
+	<h3>{{event.event.name}}</h3>
 
-		<h3>{{event.event.name}}</h3>
-
-		<h4>Seeking Volunteers Who Enjoy:</h4>
-		<div ng-repeat="skills in event">
-			<div ng-repeat="skill in skills">
-				{{skill.name}}
-			</div>
+	<h4>Seeking Volunteers Who Enjoy:</h4>
+	<div ng-repeat="skills in event">
+		<div ng-repeat="skill in skills">
+			{{skill.name}}
 		</div>
-		<br>
-		<h4>Hosted by:</h4>
-		<a href='#/organizations'>{{event.organization.name}}</a>
-		<h4>Join us at this location:</h4>
-		<p>{{event.event.street}} {{event.event.city}}, {{event.event.state}}</p>
-		<h4>Contact us:</h4>
-		<p>Phone: {{event.organization.phone_number}}, <br> Email: <a href="mailto:{{event.organization.email}}?Subject=How%20can%20I%20volunteer?" target="_top">{{event.organization.email}}</a></p>
+	</div>
+	<br>
+	<h4>Hosted by:</h4>
+	<a href='#/organizations'>{{event.organization.name}}</a>
+	<h4>Join us at this location:</h4>
+	<p>{{event.event.street}} {{event.event.city}}, {{event.event.state}}</p>
+	<h4>Contact us:</h4>
+	<p>Phone: {{event.organization.phone_number}}, <br> Email: <a href="mailto:{{event.organization.email}}?Subject=How%20can%20I%20volunteer?" target="_top">{{event.organization.email}}</a></p>
 
-		<h4>Number of Volunteers Needed:</h4>
-		<p>{{event.event.volunteers_needed}}</p>
-		<h4>Dates:</h4>
-		<p>{{event.event.start_date | date }} - {{event.event.end_date | date }}</p>
-		<!-- Add image fields-->
+	<h4>Number of Volunteers Needed:</h4>
+	<p>{{event.event.volunteers_needed}}</p>
+	<h4>Dates:</h4>
+	<p>{{event.event.start_date | date }} - {{event.event.end_date | date }}</p>
+	<!-- Add image fields-->
 
-		<br>
-		<!-- Display Google Calendar -->
-		<iframe src="https://calendar.google.com/calendar/embed?src=dkm1djphqvkko6ug6ssip99ceg%40group.calendar.google.com&ctz=America/Los_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+	<br>
+	<!-- Display Google Calendar -->
+	<iframe src="https://calendar.google.com/calendar/embed?src=dkm1djphqvkko6ug6ssip99ceg%40group.calendar.google.com&ctz=America/Los_Angeles" style="border: 0; width: 80%; height: 170%; frameborder="0" scrolling="no" "></iframe>
 
-		<div id="floating-panel">
-			<input id="address" type="hidden" value="{{event.event.street}} {{event.event.city}}, {{event.event.state}} {{event.event.zip}}">
-			<input style="visibility:hidden; height:40px; width:400px;" id="submit" type="button" value="Geocode">
-		</div>
+	<div id="floating-panel">
+		<input id="address" type="hidden" value="{{event.event.street}} {{event.event.city}}, {{event.event.state}} {{event.event.zip}}">
+		<input style="visibility:hidden; height:40px; width:400px;" id="submit" type="button" value="Geocode">
+	</div>
 
 		<!-- <br>
 		<br>
@@ -52,7 +46,7 @@
 	<br>
 	<br>
 
-	<div id="map" style="height:400px; width:400px; border-radius: 50%;"></div>
+	<div id="map" style="height:400px; width:400px; border-radius: 10%;"></div>
 
 	<br>
 
@@ -96,7 +90,7 @@
 				geocodeAddress(geocoder, map);
 
 				var trafficLayer = new google.maps.TrafficLayer();
-        trafficLayer.setMap(map);
+				trafficLayer.setMap(map);
 			});
 		}
 
