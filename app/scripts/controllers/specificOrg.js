@@ -8,7 +8,6 @@ angular.module('upliftApp')
 
     specificOrgService.get($routeParams.id).then(function(data){
       var singleOrg = data.data;
-      console.log(singleOrg);
       $scope.oneOrg = {
         Name: singleOrg.organization.name,
         Email: singleOrg.organization.email,
