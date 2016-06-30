@@ -7,8 +7,8 @@
 
 body {
   padding: 0;
-/*  background-image: url("DBCollage4.jpg");
-  background-size: 100%;*/
+  background-image: url("UpLift.jpg");
+  background-size: 100%;
 }
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
@@ -77,6 +77,9 @@ body {
   height: 400px;
 }
 
+#details {
+  text-align: center;
+}
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
@@ -97,6 +100,7 @@ body {
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
+    font-family: 
   }
 
   .orgs, .img-rounded {
@@ -112,4 +116,35 @@ body {
   .mission {
     font-style: italic; 
   }
+}
+#columns {
+  -webkit-column-count: 3;
+  -webkit-column-gap: 10px;
+  -webkit-column-fill: auto;
+  -moz-column-count: 3;
+  -moz-column-gap: 10px;
+  -moz-column-fill: auto;
+  column-count: 3;
+  column-gap: 15px;
+  column-fill: auto;
+}
+
+.pin {
+  display: inline-block;
+  background: #FEFEFE;
+  border: 2px solid #FAFAFA;
+  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+  margin: 0 2px 5px;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-inside: avoid;
+  padding: 15px;
+  padding-bottom: 5px;
+  background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
+  opacity: 1;
+  
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
 }
