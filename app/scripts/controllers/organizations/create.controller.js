@@ -15,7 +15,6 @@
         vm.addOrganization = function() { //create a new organization. Issues a POST to /api/organizations
           organization.$save(function(organization) {
             // Do something here if you want, like redirect
-            console.log(organization)
           });
         };
     }

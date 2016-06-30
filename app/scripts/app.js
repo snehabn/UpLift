@@ -32,9 +32,9 @@ angular
                 templateUrl: 'views/organizations/new.html',
                 controller: 'OrganizationCreateCtrl'
             })
-            .when('/organizations/edit', {
+            .when('/organizations/:id/edit', {
                 templateUrl: 'views/organizations/edit.html',
-                controller: 'OrganizationPutCtrl'
+                controller: 'OrganizationShowCtrl'
             })
             .when('/organizations/:id', {
                 templateUrl: 'views/organizations/show.html',

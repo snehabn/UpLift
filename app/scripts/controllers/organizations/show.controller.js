@@ -11,7 +11,9 @@
         var vm = this;
 
         organization.get({ id: $routeParams.id }, function(data) {
+            console.log(data)
             var organization = {
+                id: data.organization.id,
                 name: data.organization.name,
                 email: data.organization.email,
                 zip: data.organization.zip,
@@ -22,5 +24,11 @@
             };
             angular.extend(vm, organization)
         });
+
+        vm.updateOrganization = function () {
+            organization.update({id: vm.id}, function(organization) {
+
+            });
+        }
     }
 })();
