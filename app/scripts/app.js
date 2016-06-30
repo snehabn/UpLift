@@ -49,6 +49,13 @@ angular
         controller: 'specificEventCtrl',
         controllerAs: 'event'
       })
+      .when('/register', {
+        templateUrl: 'views/register.html',
+        controller: 'Register Controller',
+        controllerAs: 'vm'
+      })
+
+
       .otherwise({
         redirectTo: '/'
       });
