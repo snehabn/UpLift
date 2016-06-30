@@ -52,6 +52,7 @@ body {
   border-bottom: 1px solid #e5e5e5;
   background:rgba(0,0,0,0.3);
   color: white;
+  font-family: 'Calligraffitti', cursive
 }
 .jumbotron .btn {
   font-size: 21px;
@@ -256,5 +257,15 @@ margin: 10px;
 
 .card-text, .event-skills {
   font-size: 80%;
+}
+
+.event-search-filter {
+  font-family: "Calligraffitti", cursive;
+  color: white;
+}
+
+.search-filter {
+  font-family: "Calligraffitti", cursive;
+  color: black;
 }
 
