@@ -1,14 +1,15 @@
 .browsehappy {
   margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
+/*  background: #ccc;
+  color: #000;*/
   padding: 0.2em 0;
 }
 
 body {
   padding: 0;
+/*  background-image: url("DBCollage4.jpg");
+  background-size: 100%;*/
 }
-
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -45,11 +46,23 @@ body {
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
+  background:rgba(0,0,0,0.5);
 }
 .jumbotron .btn {
   font-size: 21px;
   padding: 14px 24px;
 }
+
+/* DBC Large Website Half Banner */
+/*.dbc-banner {
+  display: inline-block;
+  float: left;
+}*/
+/*body {
+  background-image: "../images/DBCollage1.jpg";*/
+/*  display: inline;
+  float: right;
+}*/
 
 /* Supporting marketing content */
 .marketing {
@@ -87,8 +100,10 @@ body {
   }
 
   .orgs, .img-rounded {
+
     height:30%;
     width:30%;
+
   }
 
   .specific-org {
@@ -96,9 +111,14 @@ body {
     max-height:40%;
   }
 
+  .list-group-item {
+    font-size: 75%
+  }
+
   .mission {
     font-style: italic;
   }
+
 
   .event-skills{
     text-transform: capitalize;
@@ -117,6 +137,12 @@ input[type=search] {
     border: none;
     padding: 10px;
     box-shadow: 1px 1px 1px #ADADAD;
+
+.org-images{
+  max-height:35%;
+  max-width:35%;
+  }
+
 }
 
 .card{
