@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('upliftApp')
-  .controller('EventsCtrl',['$scope', '$route', 'EventsService', 
+  .controller('EventsCtrl',
 
-    function ($scope, $route,EventsService) {
+    function ($scope, $route, EventsService) {
 
     // var controller = this;
     // $http({
@@ -26,4 +26,4 @@ angular.module('upliftApp')
     // EventsService.get(id).then(function(data){
     //   $scope.event = data.data;
     // });
-}]);
+});

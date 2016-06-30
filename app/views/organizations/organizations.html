@@ -1,0 +1,16 @@
+<div class="container">
+
+<div class="organization" ng-controller="OrganizationIndexCtrl as organizations">
+    <div ng-repeat="organization in organizations.organizations">
+        <div class="specific-org center-block">
+            <h1><a href="#/organizations/{{organization.id}}">{{organization.name}}</a></h1>
+            <img src="{{organization.image_url}}" class="img-rounded orgs img-responsive" alt="Rounded Image"></a>
+            <br>
+            <ul class="list-group">
+                <li class="mission list-group-item">Mission Statement: "{{organization.mission_statement}}"</li>
+            </ul>
+        </div>
+        <button ng-click="organizations.deleteOrganization(organization.id)">Delete Organization</button>
+    </div>
+</div>
+</div>
