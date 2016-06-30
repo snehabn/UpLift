@@ -1,31 +1,33 @@
 
 
 <!-- <div ng-repeat="user in users"> -->
-<div ng-controller="UsersCtrl">
-  {{user.firstName}} {{user.lastName}}<br>
-  {{user.email}}<br>
-  {{user.zip}}<br>
-  <img src="{{user.image}}" style="height:90px; width:90px;">
+<div ng-controller="UsersCtrl" class="pin"><center>
+  <div class="card-block">
+    <img class="user-image img-circle" src="{{user.image}}"><br>
+    <h3>Welcome, {{user.firstName}} {{user.lastName}}</h3>
+    <h4>Email:</h4>
+    {{user.email}}<br>
+    <h4>Zip:<h4>
+    {{user.zip}}<br><br>
 
-<!--   {{eventsUsers.id}} -->
-</div>
-
-Skills:<br>
-Programming<br>
-Teaching<br>
-<br>
-Interests:<br>
-Tracking non-airwheel steps<br>
-Bacon<br>
-<br>
-Quote:<br>
-"Be the change that you want to see in the world."<br>
-"I did the thing that does the other thing to do the thing."<br>
-"Okay, cool."
+    <h4>Skills:</h4>
+    Programming<br>
+    Teaching<br>
+    <br>
+    <h4>Interests:</h4>
+    Tracking non-airwheel steps<br>
+    Bacon<br>
+    <br>
+    <h4>Quote:</h4>
+    "Be the change that you want to see in the world."<br>
+    "I did the thing that does the other thing to do the thing."<br>
+    "Okay, cool."
+  </div>
+</center></div>  
 
 <!-- <div ng-repeat="event in eventsUsers">
     {{eventsUsers.id}}
-</div> -->
+  </div> -->
 
 <!--   <div ng-repeat="user in users">
     {{user.first_name}} {{user.last_name}}

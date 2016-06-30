@@ -1,5 +1,5 @@
 <div class="event" ng-controller="specificEventCtrl">
-	<h3 style="text-align: center">{{event.event.name}}</h3>
+	<h3 style="text-align: center" class="org-title jumbotron">{{event.event.name}}</h3>
 	<br>
 	<center>
 		<div class="pin" id="details">
@@ -29,7 +29,9 @@
 			<input style="visibility:hidden; height:20px; width:400px;" id="submit" type="button" value="Geocode">
 		</div>
 		<div class="card" id="details">
+			<center>
 			<div id="map" style="height:300px; width:300px; border-radius: 10%;"></div>
+			</center>
 		</div>
 	</center>
 	<br>

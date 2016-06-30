@@ -1,28 +1,25 @@
 
 <div class="event" ng-controller="EventsCtrl">
-  <body>
-    <h2>Here are some upcoming events!</h2>
-    <br>
-    <input type="search" ng-model="searchBox" placeholder="Search by ..." >
-    <br>
-    <br>
-    <div id="columns">
+  <h1 class="jumbotron org-title">Upcoming Events</h1>
+  <br>
+  <center>
+  <h4 class="event-search-filter">Where are you located? Or what do you enjoy?</h4>
+    <input class="search-filter" type="search" ng-model="searchBox" placeholder="Search by ...">
+  </center>
+  <br>
+  <br>
+  <div id="columns">
     <div ng-repeat="event in events | filter: searchBox">
 <!--       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
- -->        <div class="pin">
-          <div class="card-block">
-            <center><h4 class="card-title"><a href="#/events/{{event.id}}">{{event.name}}</a></h4></center>
-            <center><p class="card-text">{{event.street}} {{event.city}}, {{event.state}}</p></center>
-            <center><p class="card-text"><p class="event-skills" ng-repeat="skill in event.skills">{{skill.name}}</p></p></center>
-          </div>
-        </div>
-      </div>
-
-
-    <!-- </div> -->
-    </div>
-
-
-  </body>
-
+-->       <div class="pin">
+<div class="card-block">
+  <center><h4 class="card-title"><a href="#/events/{{event.id}}">{{event.name}}</a></h4></center>
+  <center><p class="card-text">{{event.street}} {{event.city}}, {{event.state}}</p></center>
+  <center><p class="card-text"><p class="event-skills" ng-repeat="skill in event.skills">{{skill.name}}</p></p></center>
 </div>
+</div>
+</div>
+</div>
+</div>
+
+
