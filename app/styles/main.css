@@ -100,8 +100,8 @@ body {
   }
 
   .orgs, .img-rounded {
-    height:30%; 
-    width:30%;
+    height:35%; 
+    width:35%;
   }
 
   .specific-org {
@@ -109,7 +109,16 @@ body {
     max-height:40%;
   }
 
+  .list-group-item {
+    font-size: 75%
+  }
+
   .mission {
     font-style: italic; 
+  }
+
+  .org-images {
+  max-height:35%; 
+  max-width:35%;
   }
 }
