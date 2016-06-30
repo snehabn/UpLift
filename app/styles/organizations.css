@@ -26,11 +26,27 @@
 	-webkit-transition: all .2s ease;
 	-moz-transition: all .2s ease;
 	-o-transition: all .2s ease;
-	transition: all .2s ease;
+	transition: all .2s ease;	
 }
 
 .pin img {
 	width: 100%;
 	padding-bottom: 15px;
 	margin-bottom: 5px;
+}
+
+.list-group-item {
+	font-family: 'Times New Roman';
+}
+
+.org-title {
+ 	font-family: 'Calligraffitti', cursive;
+  	color: #F9F9F9;
+	font-weight: bold;
+  	font-size: 400%;
+}
+
+.org-name {
+	font-family: 'Calligraffitti', cursive;
+
 }
