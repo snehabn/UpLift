@@ -52,7 +52,6 @@ body {
   border-bottom: 1px solid #e5e5e5;
   background:rgba(0,0,0,0.2);
   color: white;
-  font-style: 
 }
 .jumbotron .btn {
   font-size: 21px;
@@ -134,9 +133,6 @@ body {
   column-count: 3;
   column-gap: 15px;
   column-fill: auto;
-
-element.style {
-    background: url("/skin/images/bluesky-bg.jpg") blue;
 }
 
 input[type=search] {
