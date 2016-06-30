@@ -1,6 +1,7 @@
 <!doctype html>
 <html ng-app="upliftApp">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
@@ -14,8 +15,7 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    
-        <!-- build:js(.) scripts/vendor.js -->
+    <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
@@ -29,91 +29,87 @@
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/services/factories/organization.factory.js"></script>
+    <script src="scripts/controllers/organizations/index.controller.js"></script>
+    <script src="scripts/controllers/organizations/show.controller.js"></script>
+    <script src="scripts/controllers/organizations/create.controller.js"></script>
+    <script src="scripts/controllers/users.js"></script>
+    <script src="scripts/controllers/events.js"></script>
+    <script src="scripts/controllers/specificEvent.js"></script>
+    <script src="scripts/services/organizations.service.js"></script>
+    <script src="scripts/services/users.service.js"></script>
+    <script src="scripts/services/events.service.js"></script>
+    <script src="scripts/services/specificEvent.service.js"></script>
+    <script src="scripts/services/specificOrg.service.js"></script>
+    <!-- endbuild -->
+</head>
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/organizations.js"></script>
-        <script src="scripts/controllers/users.js"></script>
-        <script src="scripts/controllers/events.js"></script>
-        <script src="scripts/controllers/specificEvent.js"></script>
-        <script src="scripts/controllers/specificOrg.js"></script>
-        <script src="scripts/services/organizations.service.js"></script>
-        <script src="scripts/services/users.service.js"></script>
-        <script src="scripts/services/events.service.js"></script>
-        <script src="scripts/services/specificEvent.service.js"></script>
-        <script src="scripts/services/specificOrg.service.js"></script>
-        <!-- endbuild -->
-  </head>
-  <body>
+<body>
     <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=796968720438862";
-          fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-        </script>
+    <script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=796968720438862";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
     <!-- Add your site or application content here -->
     <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-
-            <a class="navbar-brand" href="#/">UpLift</a>
-            
-          </div>
-
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-            <ul class="nav navbar-nav">
-              <!-- <li><a ui-sref="event">Events</a></li> -->
-              <!-- <li><a ui-sref="organizations">Organizations</a></li> -->
-              <li><a ng-href="#/events">Events</a></li>
-              <li><a ng-href="#/organizations">Organizations</a></li>
-              <li><a ng-href="#/events">Recommendations</a></li>
-              <li><a ng-href="#/users">Profile</a></li>
-            </ul>
-          </div>
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#/">UpLift</a>
+                </div>
+                <div class="collapse navbar-collapse" id="js-navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <!-- <li><a ui-sref="event">Events</a></li> -->
+                        <!-- <li><a ui-sref="organizations">Organizations</a></li> -->
+                        <li><a ng-href="#/events">Events</a></li>
+                        <li><a ng-href="#/organizations">Organizations</a></li>
+                        <li><a ng-href="#/events">Recommendations</a></li>
+                        <li><a ng-href="#/users">Profile</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-
-    <div class="container">
-    <div ng-view=""></div>
-
-
-    <!-- <div id="map"></div> -->
-    </div>
-
-    <!-- <div class="footer">
+        <div class="container">
+            <div ng-view="">
+            </div>
+            <!-- <div id="map"></div> -->
+        </div>
+        <!-- <div class="footer">
       <div class="container">
         <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
       </div>
     </div>
  -->
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+        <script>
+        ! function(A, n, g, u, l, a, r) {
+            A.GoogleAnalyticsObject = l, A[l] = A[l] || function() {
+                    (A[l].q = A[l].q || []).push(arguments)
+                }, A[l].l = +new Date, a = n.createElement(g),
+                r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+        }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
+        ga('create', 'UA-XXXXX-X');
+        ga('send', 'pageview');
+        </script>
 </body>
+
 </html>
