@@ -50,7 +50,7 @@ body {
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
-  background:rgba(0,0,0,0.2);
+  background:rgba(0,0,0,0.3);
   color: white;
 }
 .jumbotron .btn {
@@ -90,6 +90,7 @@ body {
   /* Space out the masthead */
   .header {
     margin-bottom: 30px;
+    font-family: 'Calligraffitti', cursive;
   }
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
@@ -216,14 +217,36 @@ margin: 10px;
   column-break-inside: avoid;
   padding: 15px;
   padding-bottom: 5px;
-  background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
+  background: -webkit-linear-gradient(#FFF, #FAEBD7);
   opacity: 1;
   -webkit-transition: all .2s ease;
   -moz-transition: all .2s ease;
   -o-transition: all .2s ease;
   transition: all .2s ease;
+  font-family: 'Tangerine';
 }
 
 .fb-like {
   margin-left: 0%;
+}
+
+.user-image {
+  max-height: 50%;
+  max-width: 50%;
+
+}
+
+.btn, .lead {
+  font-family: "Calligraffitti", cursive;
+}
+
+.main-title {
+  color: #FAEBD7;
+  font-size: 1200%; 
+  font-family: 'Calligraffitti', cursive;
+}
+
+.navbar-brand img {
+  max-height: 200%;
+  /*max-width: 200%;*/
 }
