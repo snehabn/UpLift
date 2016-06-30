@@ -1,10 +1,10 @@
 # UpLift
 
-UpLift is a volunteer web application that curently allows its users to search for different volonteering opportunities offered by organizations based on skills, location and time.
+UpLift is a volunteer web application that currently allows its users to search for different volonteering opportunities offered by organizations based on skills, location and time.
 
-We are facilitating the seach for volonteering opportunities via better UX and search criteria with an emphasis on skills required.
+We are facilitating the search for volunteering opportunities via better UX and search criteria with an emphasis on skills required.
 
-The platform used is a webapp that is reponsive to mobile environment.
+The platform used is a webapp that is responsive to mobile environment.
 
 Group Members
 -------------------
@@ -47,7 +47,7 @@ current:
 - On the profile page page you can view the details of a user.
 
 future:
-- We would like to add authentification for users and organizations.
+- We would like to add authentication for users and organizations.
 - Users would have the ability to update their own profile and sign up for events.
 - Organizations would have the ability to create events and accept volunteers.
 - Organizations should be able to embed their calendar, social media feed and add events.
