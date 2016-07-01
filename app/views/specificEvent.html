@@ -2,7 +2,7 @@
 	<h3 style="text-align: center" class="org-title jumbotron">{{event.event.name}}</h3>
 	<br>
 	<center>
-		<div class="pin" id="details">
+		<div class="pin" id="details" style="font-family: 'Calligraffitti', cursive">
 			<h4>Seeking Volunteers Who Enjoy:</h4>
 			<div ng-repeat="skills in event">
 				<div ng-repeat="skill in skills" class="text-capitalize">
@@ -11,7 +11,7 @@
 			</div>
 			<br>
 			<h4>Hosted by:</h4>
-			<a href='#/organizations'>{{event.organization.name}}</a>
+			<a href='/#/organizations/{{event.event.organization_id}}'>{{event.organization.name}}</a>
 			<h4>Contact us:</h4>
 			<p>Phone: {{event.organization.phone_number}}, <br> Email: <a href="mailto:{{event.organization.email}}?Subject=How%20can%20I%20volunteer?" target="_top">{{event.organization.email}}</a></p>
 
@@ -82,6 +82,5 @@
 </center>
 <br>
 <br>
-
 
 </div>

@@ -259,6 +259,8 @@ margin: 10px;
 .event-search-filter {
   font-family: "Calligraffitti", cursive;
   color: white;
+  text-shadow: 2px 2px black;
+  font-size: 125%;
 }
 
 .search-filter {
@@ -266,3 +268,11 @@ margin: 10px;
   color: black;
 }
 
+.fonting {
+  font-family: 'Calligraffitti', cursive;
+}
+
+.nav-item {
+  font-size: 125%;
+  color: black;
+}
