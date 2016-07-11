@@ -1,11 +1,29 @@
-<div class="organization" ng-controller="OrganizationsCtrl">
-<h2><a href="{{organization.website_url}}  ">{{organization.name}}</a></h2>
+<div ng-controller="OrganizationsCtrl">
+	
+	<center><h1 class="org-title jumbotron">Organizations</center></h1><br>
+	<div id="columns">
+		<div ng-repeat="organization in organizations">
+			<div class="pin">
+				<center><h4><a href="#/organizations/{{organization.id}}" class="org-name">{{organization.name}}</h4>
+				<div class="specific-org">
+					<img src="{{organization.image_url}}" class="img-rounded orgs" alt="Rounded Image"></a>
+					<br></center>
+					<ul class="list-group">
+						<li class="mission list-group-item"><strong>Mission Statement:</strong> "{{organization.mission_statement}}"</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- <h2><a href="{{organization.website_url}}  ">{{organization.name}}</a></h2>
 <h4>{{organization.phone_number}}</h4>
 <h4>{{organization.email}}</h4>
 <img src="{{organization.image_url}}" style="height:90px; width:90px;">
 	<br>
 {{organization.mission_statement}}
 	<br>
-	<!-- {{organization}} -->
-	<br>
+	<!{{organization}} -->
 </div>
+
+
+

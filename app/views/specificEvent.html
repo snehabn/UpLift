@@ -1,0 +1,87 @@
+<div class="event" ng-controller="specificEventCtrl">
+	<h3 style="text-align: center" class="org-title jumbotron">{{event.event.name}}</h3>
+	<br>
+	<center>
+		<div class="pin" id="details" style="font-family: 'Calligraffitti', cursive">
+			<h4>Seeking Volunteers Who Enjoy:</h4>
+			<div ng-repeat="skills in event">
+				<div ng-repeat="skill in skills" class="text-capitalize">
+					{{skill.name}}
+				</div>
+			</div>
+			<br>
+			<h4>Hosted by:</h4>
+			<a href='/#/organizations/{{event.event.organization_id}}'>{{event.organization.name}}</a>
+			<h4>Contact us:</h4>
+			<p>Phone: {{event.organization.phone_number}}, <br> Email: <a href="mailto:{{event.organization.email}}?Subject=How%20can%20I%20volunteer?&body=Hello, 
+			I came across your event deatils on UpLift's webpage and would like to learn more about this volunteering opportunity." target="_top">{{event.organization.email}}</a></p>
+
+			<h4>Number of Volunteers Needed:</h4>
+			<p>{{event.event.volunteers_needed}}</p>
+			<h4>Dates:</h4>
+			<p>{{event.event.start_date | date }} - {{event.event.end_date | date }}</p>
+			<h4>Join us at this location:</h4>
+			<p>{{event.event.street}} {{event.event.city}}, {{event.event.state}}</p>
+		</center>
+	</div>
+	<center>
+		<div id="floating-panel">
+			<input id="address" type="hidden" value="{{event.event.street}} {{event.event.city}}, {{event.event.state}} {{event.event.zip}}">
+			<input style="visibility:hidden; height:20px; width:400px;" id="submit" type="button" value="Geocode">
+		</div>
+		<div class="card" id="details">
+			<center>
+			<div id="map" style="height:300px; width:300px; border-radius: 10%;"></div>
+			</center>
+		</div>
+	</center>
+	<br>
+
+	<script>
+		function initMap() {
+			var myLatLng = {lat: 37.773972, lng: -122.431297};
+			var map = new google.maps.Map(document.getElementById('map'), {
+				zoom: 12,
+				center: myLatLng
+			});
+			var geocoder = new google.maps.Geocoder();
+
+			document.getElementById('floating-panel').addEventListener('click', function() {
+				geocodeAddress(geocoder, map);
+
+				var trafficLayer = new google.maps.TrafficLayer();
+				trafficLayer.setMap(map);
+			});
+		}
+
+		function geocodeAddress(geocoder, resultsMap) {
+			var address = document.getElementById('address').value;
+			geocoder.geocode({'address': address}, function(results, status) {
+				if (status === google.maps.GeocoderStatus.OK) {
+					resultsMap.setCenter(results[0].geometry.location);
+					var marker = new google.maps.Marker({
+						map: resultsMap,
+						position: results[0].geometry.location,
+						animation: google.maps.Animation.DROP,
+					});
+				} else {
+					alert('Geocode was not successful for the following reason: ' + status);
+				}
+			});
+		}
+	</script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGC4vCCu27F645BNPEPAvdGN1VKebWwIQ&callback=initMap" async defer></script>
+	<br>
+</div>
+<center>
+	<div class="pin" style="vertical-align: center;">
+		<!-- Display Google Calendar -->
+		<iframe src="https://calendar.google.com/calendar/embed?src=dkm1djphqvkko6ug6ssip99ceg%40group.calendar.google.com&ctz=America/Los_Angeles" style="vertical-align: center; border: 0; width: 570px; height: 270px; frameborder="0" scrolling="no" "></iframe>
+
+	</div>
+</center>
+<br>
+<br>
+
+</div>

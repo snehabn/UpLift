@@ -1,0 +1,40 @@
+
+
+<!-- <div ng-repeat="user in users"> -->
+<div ng-controller="UsersCtrl" class="pin"><center>
+  <div class="card-block fonting">
+    <img class="user-image img-circle" src="{{user.image}}"><br>
+    <h3>Welcome, {{user.firstName}} {{user.lastName}}</h3>
+    <h4>Email:</h4>
+    {{user.email}}<br>
+    <h4>Zip:<h4>
+    {{user.zip}}<br><br>
+
+    <h4>Skills:</h4>
+    Programming<br>
+    Teaching<br>
+    Construction<br>
+    <br>
+    <h4>Interests:</h4>
+    Tracking non-airwheel steps<br>
+    Bacon<br>
+    <br>
+    <h4>Quote:</h4>
+    "Be the change that you want to see in the world."<br>
+    "I did the thing that does the other thing to do the thing."<br>
+    "Okay, cool."
+  </div>
+</center></div>  
+
+<!-- <div ng-repeat="event in eventsUsers">
+    {{eventsUsers.id}}
+  </div> -->
+
+<!--   <div ng-repeat="user in users">
+    {{user.first_name}} {{user.last_name}}
+    <br>
+    {{user.email}}
+    {{user.zip}}
+    <img src="{{user.image_url}}" style="height:90px; width:90px;">
+  </div>
+  FOR MULTIPLE USERS
