@@ -25,7 +25,7 @@ Group Members
 
 ## Installation Commands
 
-- git clone https://github.com/snehabn/uplift_client.git
+- git clone https://github.com/snehabn/UpLift.git
 - npm install
 - bower update
 - grunt serve
